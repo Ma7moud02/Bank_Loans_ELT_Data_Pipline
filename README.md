@@ -36,6 +36,7 @@ http://localhost:5000/
 - Opened Sqoop inside the Hive container:  
 ```bash
 docker exec -it hive-server bash
+
 Ran Sqoop import command:
 sqoop import \
 --connect jdbc:postgresql://external_postgres_db/postgres \
