@@ -23,3 +23,16 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
 
 ### 1. Setup & Data Loading – Postgres  
 - Opened **PgAdmin** on:  
+http://localhost:5000/
+- Created a database and loaded the `financial_loan` table into Postgres.  
+
+📸 *Screenshots to include:*  
+- PgAdmin interface showing `financial_loan` table.  
+- Terminal output confirming data is available in Postgres.  
+
+---
+
+### 2. Data Extraction – Sqoop  
+- Opened Sqoop inside the Hive container:  
+```bash
+docker exec -it hive-server bash
