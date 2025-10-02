@@ -36,3 +36,17 @@ http://localhost:5000/
 - Opened Sqoop inside the Hive container:  
 ```bash
 docker exec -it hive-server bash
+Ran Sqoop import command:
+sqoop import \
+--connect jdbc:postgresql://external_postgres_db/postgres \
+--username external \
+--password external \
+--table financial_loan \
+--target-dir /staging_zone/financial_loan \
+--as-parquetfile \
+--m 1
+📸 Screenshots to include:
+
+Sqoop command execution inside container.
+
+HDFS file listing showing imported financial_loan data.
