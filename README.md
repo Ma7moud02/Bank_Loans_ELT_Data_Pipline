@@ -26,7 +26,7 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
    ```bash
 git clone https://github.com/mrugankray/Big-Data-Cluster.git
 cd Big-Data-Cluster
-    ```
+   ```
 
 
 ## 2. Start the cluster using Docker Compose:
@@ -52,15 +52,15 @@ docker ps
 
 **1.** Open pgAdmin
 
-Access pgAdmin at:
+- Access pgAdmin at:
 
 http://localhost:5000/
 
 **2.** Login with your credentials.
 
-Create a new database (if not already created)
+- Create a new database (if not already created)
 
-Example: external database.
+- Example: external database.
 
 **3.** Upload CSV file from your local machine into the Postgres container
 
