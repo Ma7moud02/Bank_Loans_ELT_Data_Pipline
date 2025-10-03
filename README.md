@@ -48,13 +48,74 @@ docker ps
 ## 🔄 ELT Pipeline Steps  
 
 ### 1. Setup & Data Loading – Postgres  
-- Opened **PgAdmin** on:  
+📥 Load Data into Postgres (via pgAdmin)
+
+**1.** Open pgAdmin
+
+Access pgAdmin at:
+
 http://localhost:5000/
-- Created a database and loaded the `financial_loan` table into Postgres.  
+
+**2.** Login with your credentials.
+
+Create a new database (if not already created)
+
+Example: external database.
+
+**3.** Upload CSV file from your local machine into the Postgres container
+
+   ```bash
+docker cp "/path/to/financial_loan.csv" external_postgres_db:/financial_loan.csv
+
+    ```
+**4.** Open SQL query tool in pgAdmin and create a table:
+
+   ```bash
+CREATE TABLE financial_loan(
+		id BIGINT PRIMARY KEY,
+		address_state VARCHAR(10),
+		application_type VARCHAR(15),
+	 	emp_length VARCHAR(15),
+		emp_title VARCHAR(100),
+		grade VARCHAR(3),
+		home_ownership VARCHAR(15),
+		issue_date VARCHAR(25),
+		last_credit_pull_date VARCHAR(25),
+		last_payment_date VARCHAR(25),
+		loan_status VARCHAR(20),
+		next_payment_date VARCHAR(25),
+		member_id BIGINT,
+		purpose VARCHAR(100),
+		sub_grade VARCHAR(10),
+		term VARCHAR(20),
+		verification_status VARCHAR(30),
+		annual_income NUMERIC(12, 2),
+		dti NUMERIC(6, 5),
+		installment NUMERIC(12, 2),
+		int_rate NUMERIC(6, 5),
+		loan_amount INT,
+		total_acc INT,
+		total_payment INT
+)
+
+    ```
+
+**5.** Import data from CSV into the table using COPY command:
+
+   ```bash
+COPY financial_loan
+FROM '/financial_loan.csv'
+DELIMITER ','
+CSV HEADER;
+    ```
+
+**6.** Verify data load:
+
+    ```bash
+SELECT * FROM financial_loan LIMIT 10;
+   ```
 
  ![upload data in pgadmin](screenshots/pgadmin4.jpg) 
-- PgAdmin interface showing `financial_loan` table.  
-- Terminal output confirming data is available in Postgres.  
 
 ---
 
