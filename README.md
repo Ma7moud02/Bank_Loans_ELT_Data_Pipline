@@ -106,11 +106,11 @@ COPY financial_loan
 FROM '/financial_loan.csv'
 DELIMITER ','
 CSV HEADER;
-    ```
+   ```
 
 **6.** Verify data load:
 
-    ```bash
+   ```bash
 SELECT * FROM financial_loan LIMIT 10;
    ```
 
