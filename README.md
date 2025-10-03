@@ -47,7 +47,7 @@ docker ps
 ## 🔄 ELT Pipeline Steps  
 
 ### 1. Setup & Data Loading – Postgres  
-📥 Load Data which in the [financial_loan_data/](financial_loan.csv) folder. into Postgres (via pgAdmin)
+📥 Load Data which in the [financial_loan_data/](financial_loan.csv) folder into Postgres (via pgAdmin)
 
 **1.** Open pgAdmin
 
