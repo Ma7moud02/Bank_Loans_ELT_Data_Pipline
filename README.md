@@ -148,7 +148,7 @@ HDFS file listing showing imported financial_loan data
 
 * Example path: /staging_zone/financial_loan
 
-![upload data in pgadmin](screenshots/mexteract_data.png) 
+![upload data in pgadmin](screenshots/exteract_data.png) 
 
 HDFS listing with imported datase
 
