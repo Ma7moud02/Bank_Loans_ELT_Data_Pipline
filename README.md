@@ -63,7 +63,7 @@ HDFS file listing showing imported financial_loan data
 
 * Example path: /staging_zone/financial_loan
 
-📸 ![extract data ](screenshots/extract data.jpg) 
+📸 ![upload data in pgadmin](screenshots/mexteract_data.jpg) 
 
 HDFS listing with imported datase
 
@@ -77,15 +77,15 @@ http://localhost:8082/
 
 - Performed transformations in PySpark:
 
--- Data cleaning (null handling, formatting, standardization).
+- - Data cleaning (null handling, formatting, standardization).
 
--- Feature engineering (e.g., debt-to-income ratio).
+- - Feature engineering (e.g., debt-to-income ratio).
 
--- Dimensional modeling: split the raw financial_loan into:
+- - Dimensional modeling: split the raw financial_loan into:
 
---- Fact Table: fact_loan
+- - - Fact Table: fact_loan
 
---- Dimension Tables: dim_borrowers, dim_loans, dim_repayments
+- - - Dimension Tables: dim_borrowers, dim_loans, dim_repayments
 
 📸 ![upload data in pgadmin](screenshots/modeling.jpg) 
 
