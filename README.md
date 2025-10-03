@@ -174,13 +174,8 @@ http://localhost:8082/
           
  ![upload data in pgadmin](screenshots/modeling.jpg) 
 
-## 📓 Transformation Code:
- All PySpark transformation scripts are available in the Spark_Transformations.ipynb/
- folder.
 
-- Zeppelin notebook running PySpark transformations.
-
-- Star Schema diagram showing Fact and Dimension tables.
+ All PySpark transformation scripts are available in the [notebooks/](Spark_Transformations.ipynb/) folder.
 
 ---
 
