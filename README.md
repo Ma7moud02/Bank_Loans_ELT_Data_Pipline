@@ -32,7 +32,7 @@ cd Big-Data-Cluster
 ## 2. Start the cluster using Docker Compose:
 
    ```bash
-sudo docker compose -f hive-sqoop-postgres-cassandra-v2-docker-compose.yaml up
+sudo docker compose -f hive-sqoop-postgres-cassandra-docker-compose.yaml up
    ```
 
 
