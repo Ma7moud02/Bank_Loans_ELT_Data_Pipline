@@ -26,7 +26,7 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
 http://localhost:5000/
 - Created a database and loaded the `financial_loan` table into Postgres.  
 
-📸 *Screenshots to include:*  
+📸 ![upload data in pgadmin](./screenshots/pgadmin4.png) 
 - PgAdmin interface showing `financial_loan` table.  
 - Terminal output confirming data is available in Postgres.  
 
