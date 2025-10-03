@@ -52,7 +52,43 @@ http://localhost:5000/
     --as-parquetfile \
     --m 1
     ```
+Sqoop command execution inside container
+HDFS file listing showing imported financial_loan data
 
-Sqoop command execution inside container.
+---
 
-HDFS file listing showing imported financial_loan data.
+## 3. Data Storage – HDFS
+
+* Data from Postgres was successfully stored in HDFS.
+
+* Example path: /staging_zone/financial_loan
+
+📸 ![extract data ](screenshots/extract data.jpg) 
+
+HDFS listing with imported datase
+
+---
+
+## 4. Data Transformation & Modeling – Spark (Zeppelin)
+
+- Opened Zeppelin on:
+
+http://localhost:8082/
+
+- Performed transformations in PySpark:
+
+Data cleaning (null handling, formatting, standardization).
+
+Feature engineering (e.g., debt-to-income ratio).
+
+Dimensional modeling: split the raw financial_loan into:
+
+Fact Table: fact_loan
+
+Dimension Tables: dim_borrowers, dim_loans, dim_repayments
+
+📸 Screenshots to include:
+
+Zeppelin notebook running PySpark transformations.
+
+ERD diagram showing Fact and Dimension tables.
