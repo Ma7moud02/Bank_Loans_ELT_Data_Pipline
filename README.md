@@ -1,7 +1,7 @@
-# Loan Default Prediction – Big Data ETL Pipeline  
+# Loan Default Prediction – Big Data ELT Pipeline  
 
 ## 📌 Overview  
-This project demonstrates a **Big Data ETL Pipeline** for analyzing loan defaults.  
+This project demonstrates a **Big Data ELT Pipeline** for analyzing loan defaults.  
 
 We start by setting up **Postgres inside Docker**, extract data with **Sqoop** into **HDFS**, perform transformations and modeling using **Spark in Zeppelin**, load the final tables into **Hive**, and finally visualize insights with **Power BI**.  
 
@@ -45,7 +45,7 @@ docker ps
 
 ---
 
-## 🔄 ETL Pipeline Steps  
+## 🔄 ELT Pipeline Steps  
 
 ### 1. Setup & Data Loading – Postgres  
 - Opened **PgAdmin** on:  
