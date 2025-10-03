@@ -108,7 +108,9 @@ http://localhost:8082/
     df_dates.write.mode("overwrite").format("parquet").saveAsTable("dim_date")
    fact_loan.write.format("parquet").mode("overwrite").saveAsTable("fact_loan")
      ```
-    ![upload data in pgadmin](screenshots/hive.png) 
+    
+    ![upload data in pgadmin](screenshots/hive.png)
+  
 ---
 
 ## 6. Data Visualization – Power BI
