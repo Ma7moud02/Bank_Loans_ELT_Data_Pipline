@@ -19,6 +19,27 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
 
 ---
 
+🚀 Cluster Setup
+
+**1.** Clone the repository:
+
+git clone https://github.com/mrugankray/Big-Data-Cluster.git
+cd Big-Data-Cluster
+
+
+**2.** Start the cluster using Docker Compose:
+
+sudo docker compose -f hive-sqoop-postgres-cassandra-v2-docker-compose.yaml up
+
+
+**3.** Verify that the containers are running:
+
+docker ps
+
+![upload data in pgadmin](screenshots/container_done.jpg) 
+
+---
+
 ## 🔄 ETL Pipeline Steps  
 
 ### 1. Setup & Data Loading – Postgres  
