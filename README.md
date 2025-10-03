@@ -6,7 +6,7 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
 
 ## 📊 Architecture
 
-The following diagram illustrates the end-to-end architecture of the ETL pipeline:
+The following diagram illustrates the end-to-end architecture of the ELT pipeline:
 
 ![ETL Architecture](./docs/architecture.jpg)
 
