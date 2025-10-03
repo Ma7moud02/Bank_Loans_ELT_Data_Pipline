@@ -71,21 +71,21 @@ HDFS listing with imported datase
 
 ## 4. Data Transformation & Modeling – Spark (Zeppelin)
 
-- Opened Zeppelin on:
+* Opened Zeppelin on:
 
 http://localhost:8082/
 
-- Performed transformations in PySpark:
+* Performed transformations in PySpark:
 
- - Data cleaning (null handling, formatting, standardization).
+ * Data cleaning (null handling, formatting, standardization).
 
- - Feature engineering (e.g., debt-to-income ratio).
+ * Feature engineering (e.g., debt-to-income ratio).
 
- - Dimensional modeling: split the raw financial_loan into:
+ * Dimensional modeling: split the raw financial_loan into:
 
-   - Fact Table: fact_loan
+  * Fact Table: fact_loan
 
-   - Dimension Tables: dim_borrowers, dim_loans, dim_repayments
+  * Dimension Tables: dim_borrowers, dim_loans, dim_repayments
 
 📸 ![upload data in pgadmin](screenshots/modeling.jpg) 
 
