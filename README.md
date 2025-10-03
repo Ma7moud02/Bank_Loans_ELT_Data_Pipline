@@ -108,4 +108,21 @@ http://localhost:8082/
     df_dates.write.mode("overwrite").format("parquet").saveAsTable("dim_date")
    fact_loan.write.format("parquet").mode("overwrite").saveAsTable("fact_loan")
      ```
-    ![upload data in pgadmin](screenshots/hive.jpg) 
+    ![upload data in pgadmin](screenshots/hive.png) 
+---
+
+## 6. Data Visualization – Power BI
+
+* Connected Power BI to Hive using ODBC connector.
+
+* Built dashboards analyzing:
+
+    * 
+      
+    * 
+      
+    * 
+
+  ![upload data in pgadmin](screenshots/pi1.jpg)
+  ![upload data in pgadmin](screenshots/pi2.jpg)
+  ![upload data in pgadmin](screenshots/pi3.jpg) 
