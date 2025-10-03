@@ -23,18 +23,23 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
 
 ## 1. Clone the repository:
 
+   ```bash
 git clone https://github.com/mrugankray/Big-Data-Cluster.git
 cd Big-Data-Cluster
+   ```
 
 
 ## 2. Start the cluster using Docker Compose:
 
+   ```bash
 sudo docker compose -f hive-sqoop-postgres-cassandra-v2-docker-compose.yaml up
+   ```
 
 
 ## 3. Verify that the containers are running:
-
+   ```bash
 docker ps
+   ```
 
 ![upload data in pgadmin](screenshots/container_done.jpg) 
 
