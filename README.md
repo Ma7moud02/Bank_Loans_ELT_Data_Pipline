@@ -77,18 +77,18 @@ http://localhost:8082/
 
 - Performed transformations in PySpark:
 
-Data cleaning (null handling, formatting, standardization).
+-- Data cleaning (null handling, formatting, standardization).
 
-Feature engineering (e.g., debt-to-income ratio).
+-- Feature engineering (e.g., debt-to-income ratio).
 
-Dimensional modeling: split the raw financial_loan into:
+-- Dimensional modeling: split the raw financial_loan into:
 
-Fact Table: fact_loan
+--- Fact Table: fact_loan
 
-Dimension Tables: dim_borrowers, dim_loans, dim_repayments
+--- Dimension Tables: dim_borrowers, dim_loans, dim_repayments
 
-📸 Screenshots to include:
+📸 ![upload data in pgadmin](screenshots/modeling.jpg) 
 
-Zeppelin notebook running PySpark transformations.
+- Zeppelin notebook running PySpark transformations.
 
-ERD diagram showing Fact and Dimension tables.
+- ERD diagram showing Fact and Dimension tables.
