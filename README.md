@@ -2,7 +2,6 @@
 
 ## 📌 Overview  
 This project demonstrates a **Big Data ELT Pipeline** for analyzing loan defaults.  
-
 We start by setting up **Postgres inside Docker**, extract data with **Sqoop** into **HDFS**, perform transformations and modeling using **Spark in Zeppelin**, load the final tables into **Hive**, and finally visualize insights with **Power BI**.  
 
 ---
