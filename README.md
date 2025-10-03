@@ -176,7 +176,7 @@ http://localhost:8082/
 
 - Zeppelin notebook running PySpark transformations.
 
-- ERD diagram showing Fact and Dimension tables.
+- Star Schema diagram showing Fact and Dimension tables.
 
 ---
 
