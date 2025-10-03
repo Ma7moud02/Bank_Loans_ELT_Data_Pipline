@@ -38,6 +38,8 @@ http://localhost:5000/
 docker exec -it hive-server bash
 
 Ran Sqoop import command:
+
+```bash
 sqoop import \
 --connect jdbc:postgresql://external_postgres_db/postgres \
 --username external \
