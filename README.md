@@ -26,7 +26,7 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
    ```bash
 git clone https://github.com/mrugankray/Big-Data-Cluster.git
 cd Big-Data-Cluster
-   ```
+    ```
 
 
 ## 2. Start the cluster using Docker Compose:
@@ -66,8 +66,8 @@ Example: external database.
 
    ```bash
 docker cp "/path/to/financial_loan.csv" external_postgres_db:/financial_loan.csv
+   ```
 
-    ```
 **4.** Open SQL query tool in pgAdmin and create a table:
 
    ```bash
@@ -97,8 +97,7 @@ CREATE TABLE financial_loan(
 		total_acc INT,
 		total_payment INT
 )
-
-    ```
+   ```
 
 **5.** Import data from CSV into the table using COPY command:
 
