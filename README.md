@@ -85,10 +85,27 @@ http://localhost:8082/
       
         * **Fact Table:** fact_loan
           
-        * **Dimension Tables:** dim_borrowers, dim_loans, dim_repayments
+        * **Dimension Tables:** dim_borrowers, dim_loan_Term, dim_status, dim_Credit_grade, dim_Date
           
  ![upload data in pgadmin](screenshots/modeling.jpg) 
 
 - Zeppelin notebook running PySpark transformations.
 
 - ERD diagram showing Fact and Dimension tables.
+
+---
+
+## 5. Data Warehouse – Hive
+
+- After transformation, we saved the modeled tables into Hive:
+
+    ```bash
+    financial_df.write.mode("overwrite").format("hive") .saveAsTable("default.financial_loan_cleaned")
+    dim_borrowers.write.mode("overwrite").format("parquet").saveAsTable("dim_borrowers")
+    dim_status.write.mode("overwrite").format("parquet").saveAsTable("dim_status")
+    dim_credit_grade.write.mode("overwrite").format("parquet").saveAsTable("dim_credit_grade")
+    dim_loan_term.write.mode("overwrite").format("parquet").saveAsTable("dim_loan_term")
+    df_dates.write.mode("overwrite").format("parquet").saveAsTable("dim_date")
+   fact_loan.write.format("parquet").mode("overwrite").saveAsTable("fact_loan")
+     ```
+    ![upload data in pgadmin](screenshots/hive.jpg) 
