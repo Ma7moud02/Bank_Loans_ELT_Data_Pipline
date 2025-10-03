@@ -32,23 +32,26 @@ http://localhost:5000/
 
 ---
 
-### 2. Data Extraction – Sqoop  
-- Opened Sqoop inside the Hive container:  
-```bash
-docker exec -it hive-server bash
+## 2. Data Extraction – Sqoop
 
-Ran Sqoop import command:
+* Opened Sqoop inside the Hive container:
 
-```bash
-sqoop import \
---connect jdbc:postgresql://external_postgres_db/postgres \
---username external \
---password external \
---table financial_loan \
---target-dir /staging_zone/financial_loan \
---as-parquetfile \
---m 1
-📸 Screenshots to include:
+    ```bash
+    docker exec -it hive-server bash
+    ```
+
+* Ran Sqoop import command:
+
+    ```bash
+    sqoop import \
+    --connect jdbc:postgresql://external_postgres_db/postgres \
+    --username external \
+    --password external \
+    --table financial_loan \
+    --target-dir /staging_zone/financial_loan \
+    --as-parquetfile \
+    --m 1
+    ```
 
 Sqoop command execution inside container.
 
