@@ -26,7 +26,7 @@ We start by setting up **Postgres inside Docker**, extract data with **Sqoop** i
 http://localhost:5000/
 - Created a database and loaded the `financial_loan` table into Postgres.  
 
-📸 ![upload data in pgadmin](screenshots/pgadmin4.jpg) 
+ ![upload data in pgadmin](screenshots/pgadmin4.jpg) 
 - PgAdmin interface showing `financial_loan` table.  
 - Terminal output confirming data is available in Postgres.  
 
@@ -63,7 +63,7 @@ HDFS file listing showing imported financial_loan data
 
 * Example path: /staging_zone/financial_loan
 
-📸 ![upload data in pgadmin](screenshots/mexteract_data.jpg) 
+![upload data in pgadmin](screenshots/mexteract_data.jpg) 
 
 HDFS listing with imported datase
 
@@ -76,12 +76,18 @@ HDFS listing with imported datase
 http://localhost:8082/
 
 * Performed transformations in PySpark:
+  
     * Data cleaning (null handling, formatting, standardization).
+      
     * Feature engineering (e.g., debt-to-income ratio).
+      
     * Dimensional modeling: split the raw financial_loan into:
+      
         * **Fact Table:** fact_loan
+          
         * **Dimension Tables:** dim_borrowers, dim_loans, dim_repayments
-📸 ![upload data in pgadmin](screenshots/modeling.jpg) 
+          
+ ![upload data in pgadmin](screenshots/modeling.jpg) 
 
 - Zeppelin notebook running PySpark transformations.
 
