@@ -175,7 +175,7 @@ http://localhost:8082/
  ![upload data in pgadmin](screenshots/modeling.jpg) 
 
 
- All PySpark transformation scripts are available in the [notebooks/](Spark_Transformations.ipynb/) folder.
+ All PySpark transformation scripts are available in the [Spark_Transformations/](Spark_Transformations.ipynb/) folder.
 
 ---
 
