@@ -76,17 +76,11 @@ HDFS listing with imported datase
 http://localhost:8082/
 
 * Performed transformations in PySpark:
-
- * Data cleaning (null handling, formatting, standardization).
-
- * Feature engineering (e.g., debt-to-income ratio).
-
- * Dimensional modeling: split the raw financial_loan into:
-
-  * Fact Table: fact_loan
-
-  * Dimension Tables: dim_borrowers, dim_loans, dim_repayments
-
+    * Data cleaning (null handling, formatting, standardization).
+    * Feature engineering (e.g., debt-to-income ratio).
+    * Dimensional modeling: split the raw financial_loan into:
+        * **Fact Table:** fact_loan
+        * **Dimension Tables:** dim_borrowers, dim_loans, dim_repayments
 📸 ![upload data in pgadmin](screenshots/modeling.jpg) 
 
 - Zeppelin notebook running PySpark transformations.
