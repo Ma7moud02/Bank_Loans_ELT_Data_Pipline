@@ -40,7 +40,7 @@ sudo docker compose -f hive-sqoop-postgres-cassandra-docker-compose.yaml up
 docker ps
    ```
 
-![upload data in pgadmin](screenshots/container_done.jpg) 
+![upload data in pgadmin](screenshots/container_done.png) 
 
 ---
 
@@ -148,7 +148,7 @@ HDFS file listing showing imported financial_loan data
 
 * Example path: /staging_zone/financial_loan
 
-![upload data in pgadmin](screenshots/mexteract_data.jpg) 
+![upload data in pgadmin](screenshots/mexteract_data.png) 
 
 HDFS listing with imported datase
 
