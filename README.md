@@ -201,14 +201,37 @@ http://localhost:8082/
 
 * Connected Power BI to Hive using ODBC connector.
 
-* Built dashboards analyzing:
+![Summary](screenshots/Summary.jpg)
+- In the summary dashboard, you can click on filters for Purpose, Grade, and Verification Status to explore bank loan data for the year 2021.  
+- View Total Loan Applications, Total Funded Amount, and Total Amount Received.  
+- See Average Interest Rate and Average Debt-to-Income Ratio (DTI), along with monthly averages and growth rates.  
+- Explore information on Good Loan Issued, Bad Loan Issued, and Loan Status.  
+---
+![Overview](screenshots/Overview.jpg)
+- In the overview dashboard, filters for Purpose, Grade, and Verification Status are available.  
+- Explore a summary of monthly data and bank loan details for each state in the U.S.  
+- Analyze loan terms, borrower's years of employment, loan purposes, and homeowner status.  
+- Clicking on diagrams updates the data interactively across all charts and tables.  
+---
+![Details](screenshots/Details.jpg)
+- In the details dashboard, filters for Purpose, Grade, and Verification Status can be applied.  
+- Click on main table headers to sort and filter loan data.  
+- Scroll through the main table to view all loan records for banks in 2021.  
+---
+## 7. Explanation of Terms Used in the Report
 
-    * 
-      
-    * 
-      
-    * 
+**MTD (Month-to-Date):** Refers to the cumulative total for the current month up to the current date.
 
-  ![upload data in pgadmin](screenshots/pi1.jpg)
-  ![upload data in pgadmin](screenshots/pi2.jpg)
-  ![upload data in pgadmin](screenshots/pi3.jpg) 
+**MoM (Month-over-Month):** Represents the percentage or absolute change compared to the previous month.
+
+**DTI (Debt-to-Income Ratio):** DTI measures the borrower's debt burden relative to income. It gauges the borrower's capacity to take on additional debt.
+
+**Good Loan:** This category includes loans with a loan status of 'Fully Paid' and 'Current.'
+
+**Bad Loan:** This category specifically includes loans with a loan status of 'Charged Off.'
+
+**Grade:** Grade represents a risk classification assigned to the loan based on creditworthiness. Higher grades signify lower risk. Sub Grade refines the risk assessment within a grade, providing additional risk differentiation.
+
+**Verification Status:** Verification Status indicates whether the borrower's financial information has been verified. It assesses data accuracy.
+
+**Loan Status:** Loan Status indicates the current state of the loan (e.g., fully paid, current, default). It tracks loan performance.
