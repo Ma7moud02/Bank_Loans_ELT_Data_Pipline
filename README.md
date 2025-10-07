@@ -20,7 +20,8 @@ The following diagram illustrates the end-to-end architecture of the ELT pipelin
 - **Sqoop** → Data extraction from Postgres → HDFS  
 - **HDFS** → Distributed storage for extracted data  
 - **Spark (PySpark) in Zeppelin** (`http://localhost:8082/`) → Data cleaning, transformation, and dimensional modeling  
-- **Hive** → Data warehouse for analytics  
+- **Hive** → Data warehouse for analytics
+- **Hue** → Web UI for browsing HDFS, running Hive queries, and managing data
 - **Power BI** → Data visualization and dashboards  
 
 ---
@@ -53,78 +54,30 @@ docker ps
 
 ## 🔄 ELT Pipeline Steps  
 
-### 1. Setup & Data Loading – Postgres  
-📥 Load Data which in the [financial_loan_data/](financial_loan.csv) folder into Postgres (via pgAdmin)
+### 1. Source Setup – Postgres  
+📥 Access the financial loan dataset stored in the Postgres database (via pgAdmin)
 
-**1.** Open pgAdmin
+**1.** Open pgAdmin  
+- Access pgAdmin at:  
+  http://localhost:5000/
 
-- Access pgAdmin at:
+**2.** Login with your credentials.  
+user: pgadmin@xyz.com  
+password: external  
 
-http://localhost:5000/
+- Connect to the existing database (for example: external).
 
-**2.** Login with your credentials.
+**3.** Verify the financial_loan table exists and contains data:  
 
-- Create a new database (if not already created)
-
-- Example: external database.
-
-**3.** Upload CSV file from your local machine into the Postgres container
-
-   ```bash
-docker cp "/path/to/financial_loan.csv" external_postgres_db:/financial_loan.csv
-   ```
-
-**4.** Open SQL query tool in pgAdmin and create a table:
-
-   ```bash
-CREATE TABLE financial_loan(
-		id BIGINT PRIMARY KEY,
-		address_state VARCHAR(10),
-		application_type VARCHAR(15),
-	 	emp_length VARCHAR(15),
-		emp_title VARCHAR(100),
-		grade VARCHAR(3),
-		home_ownership VARCHAR(15),
-		issue_date VARCHAR(25),
-		last_credit_pull_date VARCHAR(25),
-		last_payment_date VARCHAR(25),
-		loan_status VARCHAR(20),
-		next_payment_date VARCHAR(25),
-		member_id BIGINT,
-		purpose VARCHAR(100),
-		sub_grade VARCHAR(10),
-		term VARCHAR(20),
-		verification_status VARCHAR(30),
-		annual_income NUMERIC(12, 2),
-		dti NUMERIC(6, 5),
-		installment NUMERIC(12, 2),
-		int_rate NUMERIC(6, 5),
-		loan_amount INT,
-		total_acc INT,
-		total_payment INT
-)
-   ```
-
-**5.** Import data from CSV into the table using COPY command:
-
-   ```bash
-COPY financial_loan
-FROM '/financial_loan.csv'
-DELIMITER ','
-CSV HEADER;
-   ```
-
-**6.** Verify data load:
-
-   ```bash
+``` bash
 SELECT * FROM financial_loan LIMIT 10;
-   ```
+```
 
  ![upload data in pgadmin](screenshots/pgadmin4.jpg) 
 
 ---
 
-## 2. Data Extraction – Sqoop
+## 2. Data Ingestion – Sqoop
 
 * Opened Sqoop inside the Hive container:
 
@@ -188,7 +141,7 @@ http://localhost:8082/
 
 ## 5. Data Warehouse – Hive
 
-- After transformation, we saved the modeled tables into Hive:
+- After transformation, we full load the modeled tables into Hive:
 
     ```bash
     financial_df.write.mode("overwrite").format("hive") .saveAsTable("default.financial_loan_cleaned")
